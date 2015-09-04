@@ -285,6 +285,11 @@ for s = 1:length(targetScans)
   mrCloseDlg(waitHandle);
   
   % warp the images according to the motion estimates
+  
+%   % processing motion correction output - need to make it more intuitive.
+%   motion_correction_processing;
+  
+  
   waitHandle = mrWaitBar(0,['(motionComp) Warping image volumes for scan ',num2str(scanNum),'.  Please wait...']);
   for frame = 1:totalFrames
     mrWaitBar(frame/totalFrames,waitHandle)
